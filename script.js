@@ -16,7 +16,7 @@ let cart = [];
 const searchableContent = [
     {
         title: 'Nguyễn Văn A',
-        content: 'Xin chào, tôi là Nguyễn Văn A. Lập trình viên đam mê tạo ra những sản phẩm công nghệ sáng tạo',
+        content: 'Xin chào, tôi là Nguyễn Văn A. Người đam mê tạo ra những sản phẩm công nghệ sáng tạo',
         section: 'hero'
     },
     {
@@ -272,14 +272,17 @@ function showNotification(message) {
 
 // Add to cart event listeners
 addToCartBtns.forEach((btn, index) => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const productCard = btn.closest('.product-card');
-        const productName = productCard.querySelector('.product-title').textContent;
-        const productPrice = productCard.querySelector('.price-current').textContent;
+    // Chỉ gán sự kiện nếu KHÔNG phải là thẻ <a> có href (tức là nút không phải link ngoài)
+    if (!(btn.tagName === 'A' && btn.hasAttribute('href'))) {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productCard = btn.closest('.product-card');
+            const productName = productCard.querySelector('.product-title').textContent;
+            const productPrice = productCard.querySelector('.price-current').textContent;
 
-        addToCart(productName, productPrice);
-    });
+            addToCart(productName, productPrice);
+        });
+    }
 });
 
 // Smooth scrolling for navigation links

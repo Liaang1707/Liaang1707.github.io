@@ -241,6 +241,23 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    animation: heroFadeIn 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+    position: relative;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.95);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 .hero-title {
@@ -249,14 +266,20 @@ body {
     margin-bottom: 1rem;
     line-height: 1.2;
     color: #b31260; /* Màu tím hồng đậm nổi bật */
+    animation: popText 1s cubic-bezier(.68,-0.55,.27,1.55), upDown 2.5s ease-in-out infinite alternate;
+    display: inline-block;
 }
 
-.highlight {
-    background: linear-gradient(90deg, #ff4b6e 0%, #6a0572 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-weight: 700;
+@keyframes popText {
+    0% { opacity: 0; transform: scale(0.7);}
+    60% { opacity: 1; transform: scale(1.15);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+@keyframes upDown {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-18px);}
+    100% { transform: translateY(0);}
 }
 
 .hero-subtitle {
@@ -264,6 +287,19 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     color: #6a0572; /* Màu tím đậm nhẹ nhàng */
+    animation: fadeInUp 1.2s 0.3s both, upDownSub 2.2s ease-in-out infinite alternate;
+    display: inline-block;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes upDownSub {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(12px);}
+    100% { transform: translateY(0);}
 }
 
 .hero-buttons {
