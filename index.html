@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân - Lê Đăng Hoàn</title>
+    <meta name="description" content="Trang web cá nhân của Lê Đăng Hoàn - Lập trình viên và nhà phát triển web">
+    <meta name="keywords" content="portfolio, lập trình, web developer, dự án, game">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="sakura-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;"></canvas>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-user"></i>
+                    <span>Lê Đăng Hoàn</span>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm thông tin...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="cart-icon">
+                        <i class="fas fa-bookmark"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Results -->
+    <div id="searchResults" class="search-results hidden">
+        <div class="search-results-container">
+            <div class="search-results-header">
+                <h3>Kết quả tìm kiếm</h3>
+                <button id="closeSearch"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="searchResultsList" class="search-results-list">
+                <!-- Search results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero fade-in">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Xin chào, tôi là <span class="highlight">Lê Đăng Hoàn</span></h1>
+                    <p class="hero-subtitle">Lập trình viên đam mê tạo ra những sản phẩm công nghệ sáng tạo</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">Xem Dự Án</a>
+                        <a href="#contact" class="btn btn-secondary">Liên Hệ</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-code hero-icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="products" class="products fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Dự Án Của Tôi</h2>
+                    <p class="section-subtitle">Những dự án mà tôi đã thực hiện</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="image.png" alt="Website Âm Nhạc" class="product-img">
+                            <div class="product-badge">Hoàn thành</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Website Âm Nhạc</h3>
+                            <p class="product-description">Trang web nghe nhạc online với tính năng phát nhạc, tạo playlist và khám phá âm nhạc mới.</p>
+                            <div class="product-price">
+                                <span class="price-current">Web App</span>
+                            </div>
+                            <a href="https://windy2612.github.io/" target="_blank" class="btn-add-cart">
+                                <i class="fas fa-external-link-alt"></i>
+                                Xem Dự Án
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card fade-in">
+                        <div class="product-image">
+                            <img src="attached_assets/image_1752253404762.png" alt="Game Phiêu Lưu" class="product-img">
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Game Phiêu Lưu</h3>
+                            <p class="product-description">Game được tạo từ source code mua về và tùy chỉnh theo ý tưởng cá nhân.</p>
+                            <div class="product-price">
+                                <span class="price-current">Chưa Ra mắt</span>
+                            </div>
+                            <a href="£" target="_blank" class="btn-add-cart">
+                                <i class="fas fa-external-link-alt"></i>
+                                Chơi Game
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="services fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Về Tôi</h2>
+                    <p class="section-subtitle">Thông tin cá nhân và kỹ năng</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Giới Thiệu Bản Thân</h3>
+                        <p>Tìm hiểu thêm về tôi, thông tin cá nhân và những điều thú vị về cuộc sống của tôi.</p>
+                        <br>
+                        <a href="about.html" class="btn btn-primary">Xem Chi Tiết</a>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Lập Trình Web</h3>
+                        <p>Chuyên về phát triển website và ứng dụng web với các công nghệ hiện đại</p>
+                    </div>
+                    
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Phát Triển Game</h3>
+                        <p>Tạo ra các trò chơi thú vị và có tính giải trí cao cho nhiều nền tảng</p>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact fade-in">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Liên Hệ</h2>
+                    <p class="section-subtitle">Hãy kết nối với tôi</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Thông Tin Liên Hệ</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Địa chỉ</strong>
+                                <span>Quảng Trạch, Quảng Xương, Thanh Hóa</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Điện thoại</strong>
+                                <span>0398357877</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>spiritarts1707@email.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Kết Nối Với Tôi</h3>
+                        <div class="social-grid">
+                            <a href="https://www.facebook.com/le.ang.hoan.460366" class="social-link facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://zalo.me/0398357877" class="social-link zalo">
+                                <i class="fas fa-comment"></i>
+                                <span>Zalo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Về Tôi</h4>
+                    <p>Lập trình viên đam mê công nghệ, luôn tìm kiếm những thách thức mới trong việc phát triển sản phẩm.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên Hệ</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> 0398357877</p>
+                        <p><i class="fas fa-envelope"></i> spiritarts1707@email.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i>Quảng Trạch, Quảng Xương, Thanh Hóa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lê Đăng Hoàn. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
