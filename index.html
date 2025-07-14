@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Cá Nhân - Lê Đăng Hoàn</title>
-    <meta name="description" content="Trang web cá nhân của Lê Đăng Hoàn - Nhà phát triển Web & Game">
+    <meta name="description" content="Trang web cá nhân của Lê Đăng Hoàn - Người và nhà phát triển web">
     <meta name="keywords" content="portfolio, lập trình, web developer, dự án, game">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
+
 <body>
-    <canvas id="sakura-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;"></canvas>
+    <canvas id="sakura-canvas"
+        style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;"></canvas>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -26,13 +33,13 @@
                     <i class="fas fa-user"></i>
                     <span>Lê Đăng Hoàn</span>
                 </div>
-                
+
                 <!-- Search Bar -->
                 <div class="search-container">
                     <input type="text" id="searchInput" placeholder="Tìm kiếm thông tin...">
                     <button id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
-                
+
                 <div class="header-actions">
                     <div class="cart-icon">
                         <i class="fas fa-bookmark"></i>
@@ -59,30 +66,31 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero fade-in">
+        <section class="hero fade-in" data-aos="fade-up">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Xin chào, tôi là <span class="highlight">Lê Đăng Hoàn</span></h1>
+                    <h1 class="hero-title">
+                        こんにちは、私は <span class="highlight">Lê Đăng Hoàn</span> です
+                        <br>
+                        Xin chào, tôi là <span class="highlight">Lê Đăng Hoàn</span>
+                    </h1>
                     <p class="hero-subtitle"> Đây là những thứ mình đã làm đc trong 2 năm đi học </p>
                     <div class="hero-buttons">
                         <a href="#products" class="btn btn-primary">Xem Dự Án</a>
                         <a href="#contact" class="btn btn-secondary">Liên Hệ</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <i class="fas fa-code hero-icon"></i>
-                </div>
             </div>
         </section>
 
         <!-- Projects -->
-        <section id="products" class="products fade-in">
+        <section id="products" class="products fade-in" data-aos="fade-up">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Dự Án Của Tôi</h2>
                     <p class="section-subtitle">Những dự án mà tôi đã thực hiện</p>
                 </div>
-                
+
                 <div class="products-grid">
                     <div class="product-card fade-in">
                         <div class="product-image">
@@ -91,7 +99,8 @@
                         </div>
                         <div class="product-content">
                             <h3 class="product-title">Website Âm Nhạc</h3>
-                            <p class="product-description">Trang web nghe nhạc online với tính năng phát nhạc, tạo playlist và khám phá âm nhạc mới.</p>
+                            <p class="product-description">Trang web nghe nhạc online với tính năng phát nhạc, tạo
+                                playlist và khám phá âm nhạc mới.</p>
                             <div class="product-price">
                                 <span class="price-current">Web App</span>
                             </div>
@@ -101,24 +110,25 @@
                             </a>
                         </div>
                     </div>
-                    
+
                     <div class="product-card fade-in">
                         <div class="product-image">
-                            <img src="attached_assets/image_1752253404762.png" alt=" Phiêu Lưu" class="product-img">
+                            <img src="attached_assets/image_1752253404762.png" alt="Game Phiêu Lưu" class="product-img">
                         </div>
                         <div class="product-content">
                             <h3 class="product-title">Game Phiêu Lưu</h3>
-                            <p class="product-description">Game được tạo từ source code mua về và tùy chỉnh theo ý tưởng cá nhân.</p>
+                            <p class="product-description">Game được tạo từ source code mua về và tùy chỉnh theo ý tưởng
+                                cá nhân.</p>
                             <div class="product-price">
                                 <span class="price-current">Chưa Ra mắt</span>
                             </div>
-                            <a href="#" target="_blank" class="btn-add-cart">
+                            <a href="£" target="_blank" class="btn-add-cart">
                                 <i class="fas fa-external-link-alt"></i>
                                 Chơi Game
                             </a>
                         </div>
                     </div>
-                    
+
 
                 </div>
             </div>
@@ -131,7 +141,7 @@
                     <h2 class="section-title">Về Tôi</h2>
                     <p class="section-subtitle">Thông tin cá nhân và kỹ năng</p>
                 </div>
-                
+
                 <div class="services-grid">
                     <div class="service-card fade-in">
                         <div class="service-icon">
@@ -142,7 +152,7 @@
                         <br>
                         <a href="about.html" class="btn btn-primary">Xem Chi Tiết</a>
                     </div>
-                    
+
                     <div class="service-card fade-in">
                         <div class="service-icon">
                             <i class="fas fa-code"></i>
@@ -150,7 +160,7 @@
                         <h3>Lập Trình Web</h3>
                         <p>Mình làm đươc 1 số website và ứng dụng web</p>
                     </div>
-                    
+
                     <div class="service-card fade-in">
                         <div class="service-icon">
                             <i class="fas fa-gamepad"></i>
@@ -158,54 +168,56 @@
                         <h3>Phát Triển Game</h3>
                         <p>Tạo ra các trò chơi thú vị và có tính giải trí cao cho nhiều nền tảng</p>
                     </div>
-                    
+
 
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact fade-in">
+        <section id="contact" class="contact jp-footer">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Liên Hệ</h2>
-                    <p class="section-subtitle">Hãy kết nối với tôi</p>
-                </div>
-                
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Thông Tin Liên Hệ</h3>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Địa chỉ</strong>
-                                <span>Quảng Trạch, Quảng Xương, Thanh Hóa</span>
-                            </div>
-                        </div>
+                        <h3>
+                            <span class="jp-label">連絡先</span>
+                            Liên Hệ
+                        </h3>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
-                                <strong>Điện thoại</strong>
+                                <strong>電話番号</strong>
                                 <span>0398357877</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <strong>Email</strong>
+                                <strong>メール</strong>
                                 <span>spiritarts1707@email.com</span>
                             </div>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>住所</strong>
+                                <span>クアンチャック, クアンシュオン, タインホア<br>Quảng Trạch, Quảng Xương, Thanh Hóa</span>
+                            </div>
+                        </div>
                     </div>
-                    
                     <div class="social-links">
-                        <h3>Kết Nối Với Tôi</h3>
+                        <h3>
+                            <span class="jp-label">繋がり</span>
+                            Kết Nối Với Tôi
+                        </h3>
                         <div class="social-grid">
-                            <a href="https://www.facebook.com/le.ang.hoan.460366" class="social-link facebook">
+                            <a href="https://www.facebook.com/le.ang.hoan.460366" class="social-link facebook jp-btn">
+                                <span class="jp-btn-label">友達</span>
                                 <i class="fab fa-facebook-f"></i>
                                 <span>Facebook</span>
                             </a>
-                            <a href="https://zalo.me/0398357877" class="social-link zalo">
+                            <a href="https://zalo.me/0398357877" class="social-link zalo jp-btn">
+                                <span class="jp-btn-label">連絡</span>
                                 <i class="fas fa-comment"></i>
                                 <span>Zalo</span>
                             </a>
@@ -214,27 +226,37 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer jp-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Về Tôi</h4>
+                    <h4>
+                        <span class="jp-label">自己紹介</span>
+                        Về Tôi
+                    </h4>
+                    <p>テクノロジーに情熱を持ち、新しい挑戦を探し続けています。</p>
                     <p>Người đam mê công nghệ, luôn tìm kiếm những thách thức mới trong việc phát triển sản phẩm.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Liên Hệ</h4>
+                    <h4>
+                        <span class="jp-label">連絡先</span>
+                        Liên Hệ
+                    </h4>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> 0398357877</p>
                         <p><i class="fas fa-envelope"></i> spiritarts1707@email.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i>Quảng Trạch, Quảng Xương, Thanh Hóa</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Lê Đăng Hoàn. Tất cả quyền được bảo lưu.</p>
+                <p>
+                    <span class="jp-label">著作権 &copy; 2025</span>
+                    &copy; 2025 Lê Đăng Hoàn. Tất cả quyền được bảo lưu.
+                </p>
             </div>
         </div>
     </footer>
@@ -246,5 +268,10 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>

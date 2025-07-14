@@ -452,20 +452,26 @@ function randomBetween(a, b) {
 
 class Sakura {
     constructor() {
+        this.reset();
+        this.waveOffset = Math.random() * 1000;
+    }
+    reset() {
         this.x = randomBetween(0, width);
         this.y = randomBetween(-height, 0);
-        this.size = randomBetween(12, 24);
-        this.speedY = randomBetween(1, 2.5);
-        this.speedX = randomBetween(-0.5, 0.5);
+        this.size = randomBetween(12, 32); // đa dạng hơn
+        this.speedY = randomBetween(0.8, 2.8);
+        this.baseSpeedX = randomBetween(-0.7, 0.7);
         this.angle = randomBetween(0, 2 * Math.PI);
-        this.angleSpeed = randomBetween(-0.02, 0.02);
-        this.opacity = randomBetween(0.7, 1);
+        this.angleSpeed = randomBetween(-0.03, 0.03);
+        this.opacity = randomBetween(0.5, 1);
+        this.waveAmplitude = randomBetween(10, 40); // lượn sóng
+        this.waveFrequency = randomBetween(0.001, 0.003);
     }
     draw(ctx) {
         ctx.save();
         ctx.globalAlpha = this.opacity;
         ctx.translate(this.x, this.y);
-        ctx.rotate(this.angle);
+        ctx.rotate(this.angle + Math.sin(Date.now() * 0.001 + this.waveOffset) * 0.5); // lắc nhẹ
         // Petal shape
         ctx.beginPath();
         ctx.moveTo(0, 0);
@@ -486,22 +492,18 @@ class Sakura {
         ctx.restore();
     }
     update() {
-        this.x += this.speedX;
+        // Lượn sóng theo trục X
+        this.x += this.baseSpeedX + Math.sin(Date.now() * this.waveFrequency + this.waveOffset) * 0.7;
         this.y += this.speedY;
         this.angle += this.angleSpeed;
-        if (this.y > height + 20 || this.x < -40 || this.x > width + 40) {
-            this.x = randomBetween(0, width);
+        if (this.y > height + 40 || this.x < -60 || this.x > width + 60) {
+            this.reset();
             this.y = randomBetween(-40, 0);
-            this.size = randomBetween(12, 24);
-            this.speedY = randomBetween(1, 2.5);
-            this.speedX = randomBetween(-0.5, 0.5);
-            this.angle = randomBetween(0, 2 * Math.PI);
-            this.opacity = randomBetween(0.7, 1);
         }
     }
 }
 
-const sakuraCount = 40;
+const sakuraCount = 60; // tăng số lượng
 const sakuras = [];
 for (let i = 0; i < sakuraCount; i++) {
     sakuras.push(new Sakura());

@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Về Tôi - Lê Đăng Hoàn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Nhật Bản & Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Sawarabi+Mincho&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
+
 <body>
     <!-- Sakura Canvas -->
-    <canvas id="sakura-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;"></canvas>
+    <canvas id="sakura-canvas"
+        style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:1;"></canvas>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -19,7 +27,6 @@
                     <i class="fas fa-user"></i>
                     <span>Lê Đăng Hoàn</span>
                 </div>
-                
                 <div class="header-actions">
                     <a href="index.html" class="btn btn-primary">Trang Chủ</a>
                 </div>
@@ -29,26 +36,26 @@
 
     <main>
         <!-- About Hero Section -->
-        <section class="hero">
+        <section class="hero" data-aos="fade-up">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">Về <span class="highlight">Tôi</span></h1>
+                    <h1 class="hero-title">
+                        こんにちは、私は <span class="highlight">Lê Đăng Hoàn</span> です
+                        <br>
+                        Về <span class="highlight">Tôi</span>
+                    </h1>
                     <p class="hero-subtitle">Thông tin chi tiết về con người và cuộc sống của tôi</p>
-                </div>
-                <div class="hero-image">
-                    <i class="fas fa-user-circle hero-icon"></i>
                 </div>
             </div>
         </section>
 
         <!-- Personal Information Section -->
-        <section class="services">
+        <section class="services" data-aos="fade-up">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Thông Tin Cá Nhân</h2>
                     <p class="section-subtitle">Tìm hiểu về tôi</p>
                 </div>
-                
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">
@@ -57,7 +64,7 @@
                         <h3>Họ Tên</h3>
                         <p>Lê Đăng Hoàn</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-birthday-cake"></i>
@@ -65,7 +72,7 @@
                         <h3>Ngày Sinh</h3>
                         <p>26/12/2005</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -73,7 +80,7 @@
                         <h3>Nơi Ở</h3>
                         <p>Quảng Trạch, Quảng Xương, Thanh Hóa</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-graduation-cap"></i>
@@ -81,7 +88,7 @@
                         <h3>Học Vấn</h3>
                         <p>Sinh Viên Khoa Công nghệ Thông tin</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-heart"></i>
@@ -89,21 +96,23 @@
                         <h3>Sở Thích</h3>
                         <p>Lập trình, Game, Âm nhạc</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-gamepad"></i>
                         </div>
                         <h3>Đam Mê Game</h3>
-                        <p>Tôi có niềm đam mê với việc phát triển game. Tôi đã tự học và tạo ra một số game nhỏ, cũng như mua và tùy chỉnh các source code game để học hỏi thêm.</p>
+                        <p>Tôi có niềm đam mê với việc phát triển game. Tôi đã tự học và tạo ra một số game nhỏ, cũng
+                            như mua và tùy chỉnh các source code game để học hỏi thêm.</p>
                     </div>
-                    
+
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-music"></i>
                         </div>
                         <h3>Yêu Thích Âm Nhạc</h3>
-                        <p>Âm nhạc là nguồn cảm hứng lớn trong cuộc sống của tôi. Tôi đã phát triển một website âm nhạc để có thể nghe nhạc online và chia sẻ những bài hát yêu thích với bạn bè.</p>
+                        <p>Âm nhạc là nguồn cảm hứng lớn trong cuộc sống của tôi. Tôi đã phát triển một website âm nhạc
+                            để có thể nghe nhạc online và chia sẻ những bài hát yêu thích với bạn bè.</p>
                     </div>
                 </div>
             </div>
@@ -111,28 +120,48 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+   <footer class="footer jp-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Về Tôi</h4>
+                    <h4>
+                        <span class="jp-label">自己紹介</span>
+                        Về Tôi
+                    </h4>
+                    <p>テクノロジーに情熱を持ち、新しい挑戦を探し続けています。</p>
                     <p>Người đam mê công nghệ, luôn tìm kiếm những thách thức mới trong việc phát triển sản phẩm.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Liên Hệ</h4>
+                    <h4>
+                        <span class="jp-label">連絡先</span>
+                        Liên Hệ
+                    </h4>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> 0398357877</p>
                         <p><i class="fas fa-envelope"></i> spiritarts1707@email.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i>Quảng Trạch, Quảng Xương, Thanh Hóa</p>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Lê Đăng Hoàn. Tất cả quyền được bảo lưu.</p>
+                <p>
+                    <span class="jp-label">著作権 &copy; 2025</span>
+                    &copy; 2025 Lê Đăng Hoàn. Tất cả quyền được bảo lưu.
+                </p>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
